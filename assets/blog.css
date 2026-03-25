@@ -1,0 +1,46 @@
+html, body {
+  overflow: auto;
+  position: static;
+  align-items: flex-start;
+}
+#main {
+  width: min(600px, 90vw);
+  margin: 80px auto;
+  align-items: flex-start;
+}
+#back {
+  font-size: 14px;
+  color: #b6b6b6;
+  text-decoration: none;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+#back:hover { 
+  color: #e89dff;
+}
+#page-title {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+.post {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 0;
+}
+.post-date {
+  font-size: 13px;
+  color: #b6b6b6;
+  margin-bottom: 6px;
+}
+.post-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.post-excerpt {
+  font-size: 15px;
+  color: #b6b6b6;
+  margin-top: 6px;
+  line-height: 1.6;
+}

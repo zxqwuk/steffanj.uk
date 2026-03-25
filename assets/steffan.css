@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+a:link, a:visited, a:active {
+  color: #b6b6b6;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+a:hover {
+  color: #f4d0ff;
+}
+a svg.lucide {
+  transition: stroke 0.4s ease;
+}
+a:hover svg.lucide {
+  stroke: #f4d0ff;
+}
+a:hover .nav-logo {
+  opacity: 1;
+  transform: scale(1.05);
+}
+@keyframes gradientAnim {
+  0% { background-position: 0% center;}
+  100% { background-position: 100% center;}
+}
+html, body {
+  margin: 0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(146deg, rgba(79, 42, 94, 1) 0%, rgba(54, 44, 99, 1) 100%);
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-logo {
+  height: 18px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#main {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+#name {
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(60deg, #f4d0ff, #d0d2ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientAnim 4s ease-in-out infinite alternate;
+}
+#name:hover {
+  cursor: default;
+}
+#brand-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bg-logo {
+  position: absolute;
+  height: 140px;
+  width: auto;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sections {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.section {
+  color: #b6b6b6;
+  font-size: 18px;
+  font-weight: 400;
+}
+#section_mail {
+  margin-top: 6px;
+}
