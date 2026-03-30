@@ -52,6 +52,13 @@ $(function () {
   }
 
   $.getJSON(base + 'manifest.json', function (data) {
+    for (var i = data.photos.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = data.photos[i];
+      data.photos[i] = data.photos[j];
+      data.photos[j] = temp;
+    }
+
     $.each(data.photos, function (_, filename) {
       var $slot = $('<div class="photo-slot loading"></div>');
       var $img = $('<img>').attr('alt', '');
